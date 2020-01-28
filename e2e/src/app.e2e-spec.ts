@@ -1,17 +1,27 @@
-import { AppPage } from './app.po';
-import { browser, logging } from 'protractor';
+/**
+ * To set up a debugger 
+ * 
+ * https://github.com/microsoft/vscode-recipes/tree/master/Angular-CLI#debug-end-to-end-tests
+ */
+
+import { browser, logging, element, by } from 'protractor';
+import { fillField } from './utils';
 
 describe('workspace-project App', () => {
-  let page: AppPage;
 
   beforeEach(() => {
-    page = new AppPage();
   });
 
-  it('should display welcome message', () => {
-    page.navigateTo();
-    expect(page.getTitleText()).toEqual('frontend-exercise app is running!');
+  it('should display a sign up form', async () => {
+    await browser.get(browser.baseUrl);
+    const form = element(by.css('.form-signup'));
+    expect(form.isPresent());
   });
+
+  it('should arrive to the user dashboard after sign up', async () => {
+    await browser.get(browser.baseUrl);
+    await fill
+  });  
 
   afterEach(async () => {
     // Assert that there are no errors emitted from the browser
