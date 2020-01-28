@@ -34,13 +34,15 @@ to code structure, ideas, etc.
 
 * Make a pull request against the repository you just created 
 
-* when you are done, Send an invite to the repository to Github user `miohtama`
+* When you are done, send an invite to the repository to Github user `miohtama`
 
 * I will take a look, make notes and let you know the feedback. There are two possible outcomes
 
     - You will be invited to a video interview and continue the hiring process
 
     - We will let you know that the exercise was not completed properly, but we might consider you for other positions 
+
+    - Give me 1-2 business takes to evaluate
 
 ## Pull request content 
 
@@ -54,16 +56,24 @@ Things we would like to see in the pull request commentary
 
 # Exercise
 
-The application has a sign up form as in the screenshot.
+The application has a sign-up form as in the screenshot.
 
-1. Ask users for their international telephone number
+![A sample screenshot](https://raw.githubusercontent.com/miohtama/frontend-exercise/master/screenshot.png)
 
-2. This number should be stored 
+1. Add a field asking users for their international mobile phone number. Make sure this input is user-friendly 
+   and works with people who have no clue what's an international phone number. You are free to 
+   pick any component and framework to include in this project, just make sure the result is slick.
 
-3. Write an end-toend test that checks the phone number was correctly saved. You might need to add a control displaying the telephone number back to the user somewhere.
+2. This number should be stored in the `UserService` when the user registers. When the number is stored,
+   name sure it is normalised in plus format like `+3581231234`, no spaces or funny characters.  
+   Also add a validator, so that the users don't input crap on this field, though validating the 
+   actual phone number existence is not part of the exercise. 
 
-4. Make the sign up form pretty. Currently it lacks all styling. It needs to look pretty and behave well both on web and mobile.
+3. Write an end-t-end test that checks the phone number was correctly saved. You might need to add a control displaying the telephone number back to the user somewhere.
+   This test must be executed when `ng e2e` is run.
 
+4. Make the sign-up form pretty. Currently, as you see, it lacks good styling. 
+   The page needs to look pretty and behave well both web and mobile.
 
 # How to run code
 
