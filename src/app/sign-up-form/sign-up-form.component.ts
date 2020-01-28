@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+
+import { UserService } from '../user.service';
 
 // For inspiration, you can look at https://stackblitz.com/edit/example-angular-material-reactive-form?file=app%2Fapp.component.html
 @Component({
@@ -10,9 +13,8 @@ import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
 export class SignUpFormComponent implements OnInit {
 
   formGroup: FormGroup;
-  data: any;
 
-  constructor(private formBuilder: FormBuilder) { 
+  constructor(private formBuilder: FormBuilder, private router: Router, private userService: UserService) { 
   }
 
   ngOnInit() {
@@ -23,11 +25,12 @@ export class SignUpFormComponent implements OnInit {
       'name': [null, Validators.required],
       'password': [null, [Validators.required]]
     });    
-    console.log(this.formGroup);
   }
 
-  onSubmit(data) {
-    this.data = data;
-    console.log(this.data);
+  onSubmit(data: any) {
+    console.log("Form incoming", data);
+    let user = this.userService.register(data.email, data.name, data.password);
+    console.log("Created user", user);    
+    this.router.navigate(['/home']);
   }  
 }
