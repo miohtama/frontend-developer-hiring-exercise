@@ -1,0 +1,13 @@
+@import '../../variables';
+
+.form-signup {
+    color: black;
+    width: 100%;
+    padding: 20px;
+
+    mat-form-field {
+        width: 300px;
+        padding: $big-padding;
+    }
+}
+

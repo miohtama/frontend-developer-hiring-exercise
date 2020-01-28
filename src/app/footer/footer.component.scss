@@ -1,0 +1,19 @@
+@import '../../variables';
+
+footer {
+    color: white;
+    margin-top: $big-padding;
+    padding: $big-padding;
+    background: $theme-primary;
+    text-align: center;
+
+    a {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
