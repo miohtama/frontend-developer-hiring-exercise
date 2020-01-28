@@ -69,7 +69,8 @@ The application has a sign-up form as in the screenshot.
    Also add a validator, so that the users don't input crap on this field, though validating the 
    actual phone number existence is not part of the exercise. 
 
-3. Write an end-t-end test that checks the phone number was correctly saved. You might need to add a control displaying the telephone number back to the user somewhere.
+3. Write an end-to-end test that checks the phone number was correctly saved. 
+   You might need to add a control displaying the telephone number back to the user somewhere.
    This test must be executed when `ng e2e` is run.
 
 4. Make the sign-up form pretty. Currently, as you see, it lacks good styling. 
@@ -103,13 +104,10 @@ You can also run tests under [Visual Studio Code with debug/breakpoint support w
 
 * Start `ng serve` on a background
 
-* Setup `ng e2e` configuration within Visual Studio Code debug launcher. `launch.json` example:
+* Setup `ng e2e` configuration within a Visual Studio Code debug launcher. `launch.json` example:
 
 ```json
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
