@@ -99,7 +99,8 @@ The task is to add a new field on this sign-up screen and make the sign-up form 
 4. Make the sign-up form pretty. Currently, as you see, the form lacks good styling. 
    The page needs to look pretty and behave well both web and mobile. Element sizes,
    paddings, margins and fonts look harmonious. This 
-   assess that you are able to accomplish basic UI design work.
+   assess that you are able to accomplish basic UI design work. The context of the 
+   form is an imaginary eSports or video game site.
 
 # How to run code
 
