@@ -67,7 +67,7 @@ for recommendations and new best practices we learn from you.
 
 Things we would like to see in the pull request commentary
 
-* What what was changed and why
+* What was changed and why
 
 * The screenshot of fixed issues and changes in the UI
 
