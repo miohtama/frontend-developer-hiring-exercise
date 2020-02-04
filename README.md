@@ -110,6 +110,33 @@ The assessment is based on Angular 8 scaffolding.
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+Tested on Node v11.0.0.
+
+Example:
+
+```
+npm install
+ng serve
+```
+
+Should give you
+
+```
+10% building 3/3 modules 0 activeℹ ｢wds｣: Project is running at http://localhost:4200/webpack-dev-server/
+ℹ ｢wds｣: webpack output is served from /
+ℹ ｢wds｣: 404s will fallback to //index.html
+
+chunk {main} main.js, main.js.map (main) 71.4 kB [initial] [rendered]
+chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 264 kB [initial] [rendered]
+chunk {runtime} runtime.js, runtime.js.map (runtime) 6.15 kB [entry] [rendered]
+chunk {styles} styles.js, styles.js.map (styles) 179 kB [initial] [rendered]
+chunk {vendor} vendor.js, vendor.js.map (vendor) 6.98 MB [initial] [rendered]
+Date: 2020-02-04T10:04:44.023Z - Hash: 6e5aa8eb8c49ec6ad889 - Time: 10113ms
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+ℹ ｢wdm｣: Compiled successfully.
+```
+
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
