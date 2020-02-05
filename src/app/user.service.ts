@@ -29,8 +29,9 @@ export class UserService {
    * Registers a new user and sets up the session immediately.
    *     
    */
-  register(email, name, password): User {
-    let user = new User(email, name);
+   // update entry parameter
+  register(email, name, password, phone): User {
+    let user = new User(email, name, phone);
     localStorage.setItem('currentUser', JSON.stringify(user));
     this.currentUserSubject.next(user);
     return user;

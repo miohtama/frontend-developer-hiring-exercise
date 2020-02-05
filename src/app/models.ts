@@ -12,10 +12,14 @@ export class User {
     // User real name
     name: string;
 
-    // Password field is never stored on the client side
+    // User Phone
+    phone: string;
 
-    constructor(email, name) {
+    // Password field is never stored on the client side
+    // update model and constructor
+    constructor(email, name, phone) {
         this.email = email;
         this.name = name;
+        this.phone = phone;
     }
 }

@@ -21,10 +21,12 @@ describe('workspace-project App', () => {
   it('should arrive to the user dashboard after sign up', async () => {
     await browser.get(browser.baseUrl);
     const name = "Mikko Ohtamaa";
+    const phone = "+123456789";
     
     await fillMaterialField("password", "supersecret");
     await fillMaterialField("email", "example@example.com"); // https://en.wikipedia.org/wiki/Example.com
-    await fillMaterialField("name", name)
+    await fillMaterialField("name", name);
+    await fillMaterialField("name", phone);
     await element(by.css('.form-signup button')).click();
     expect(element(by.css('.span-user-full-name')).getText()).toBe(name);
   });  

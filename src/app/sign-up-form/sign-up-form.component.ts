@@ -19,17 +19,20 @@ export class SignUpFormComponent implements OnInit {
 
   ngOnInit() {
     // Construct the form using the injected FormBuilder
+    //  add new attibute phone
     const emailregex: RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     this.formGroup = this.formBuilder.group({
       'email': [null, [Validators.required, Validators.pattern(emailregex)]],
       'name': [null, Validators.required],
-      'password': [null, [Validators.required]]
+      'password': [null, [Validators.required]],
+      'phone': [null, [Validators.required]],
     });    
   }
 
   onSubmit(data: any) {
+    // update paremeter services
     console.log("Form incoming", data);
-    let user = this.userService.register(data.email, data.name, data.password);
+    let user = this.userService.register(data.email, data.name, data.password, data.phone);
     console.log("Created user", user);    
     this.router.navigate(['/home']);
   }  
