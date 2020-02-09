@@ -1,3 +1,5 @@
+*Please note this position is closed and we are not taking anymore new submissions.*
+
 # Frontend software developer hiring exercise
 
 This is a sample project for frontend skills assessment in our developer positions. 
