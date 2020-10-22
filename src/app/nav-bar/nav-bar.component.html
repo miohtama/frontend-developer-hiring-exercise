@@ -7,9 +7,7 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list fxLayoutAlign="center center">
-      <a mat-list-item href="#">Dashboard</a>
-      <a mat-list-item href="#">About</a>
-      <a mat-list-item href="#">Support</a>
+      <a mat-list-item routeLink="/dashboard">Dashboard</a>
     </mat-nav-list>
 
     <mat-divider></mat-divider>
@@ -37,7 +35,6 @@
     <router-outlet>
     </router-outlet>
 
-    <app-footer></app-footer>
 
   </mat-sidenav-content>
 

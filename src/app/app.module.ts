@@ -10,11 +10,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
 import { FooterOnlyFrameComponent } from './footer-only-frame/footer-only-frame.component';
 import { FullFrameComponent } from './full-frame/full-frame.component';
 import { FooterComponent } from './footer/footer.component';
@@ -33,7 +28,7 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
     FullFrameComponent,
     FooterComponent,
     SignUpFormComponent,
-    UserDashboardComponent,    
+    UserDashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +38,7 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
     LayoutModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule    
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

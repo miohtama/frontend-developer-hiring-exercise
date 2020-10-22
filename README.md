@@ -9,27 +9,25 @@ This exercise is open only for candidates who we have send an email to complete 
 
 ## Your task
 
-Your task is to create a registration form for Angular 9, NestJS + Clarity application.
+Your task is to create a registration form for Angular and Angular Material application.
 We estimate this will take 3-4 hours for a person who is familiar with the technology stack.
-The application skeleton and instructions are well prepared,
-but expect extra 2-4 hours if you are not familiar with NestJS or Clarity.
-The technology stack is the same that you will be using in when working us.
 
 Task:
 
-- Add a registration screen to an existing Angular application skeleton
-  - The new registration screen is linked from the login screen ("Sign up")
+- You are building an imaginary video gaming application
+
+- Update the registration screen to an existing Angular application skeleton
   - We need to input the following from the new users:
     - Email
     - Password
     - Display name
     - Phone number in an international plus prefixed format, like `+1 555 1231234`
 
-- Make the login/registration form look professional
+- Make the login/registration form look professional. Now it is intentionally made to look ugly.
 
 - Think phone number input UX.
-  Phone number widget must have a good UX for global visitors who might lack an understanding
-  what a phone number country code is. Feel free to use your favorite phone number
+  A phone number widget must have a good UX for global visitors who might lack an understanding
+  what phone number country code is. Feel free to use your favorite phone number
   widget.
 
 - Add a phone number to the existing dashboard screen, so that users can see their registered phone number
@@ -38,7 +36,9 @@ Task:
   - Registration success - validated by having the information visible on the dashboard screen
   - Bad phone number
   - Bad email
+  - Password mismatch
   - Any other validation you know needs to be done on a normal registration form
+  - If you do not like Protractor you are free to use Cypress or other alternatives
 
 - Open a pull request which will be reviewed
   - Commentary contains screenshots of changed screens
@@ -46,6 +46,8 @@ Task:
     assuming they run the application locally on their computer
   - Commentary on other application structure you would prefer to change if you were to take over the whole application,
     or other useful suggestions
+
+- As the application is unfinished, we are focusing only on the UX of the registration screen
 
 ## How to submit the exercise
 
@@ -74,7 +76,7 @@ The assessment is based on Angular 8 scaffolding.
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Tested on Node v12.0.0.
+Tested on Node v12.
 
 Example:
 

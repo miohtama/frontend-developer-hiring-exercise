@@ -14,9 +14,14 @@ export class UserDashboardComponent implements OnInit {
   ngOnInit() {
   }
 
-  getFullName(): string {    
+  getFullName(): string {
     const user = this.userService.getCurrentUser();
     return user && user.name || '';
+  }
+
+  getEmail(): string {
+    const user = this.userService.getCurrentUser();
+    return user && user.email;
   }
 
 }

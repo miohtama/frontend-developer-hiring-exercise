@@ -1,5 +1,15 @@
 @import '../../variables';
 
-.user-dashboard p {
+.user-dashboard {
     padding: $big-padding;
+
+    h2 {
+        margin-bottom: 60px;
+    }
+
+    .label {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
 }

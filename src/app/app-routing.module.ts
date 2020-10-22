@@ -10,7 +10,7 @@ import { FullFrameComponent } from './full-frame/full-frame.component';
 const routes: Routes = [
   { path: '', redirectTo: 'sign-up', pathMatch: 'full' },
   { path: 'sign-up', component: FooterOnlyFrameComponent, children: [{path: '', component: SignUpComponent}] },
-  { path: 'home', component: FullFrameComponent, children: [{path: '', component: UserHomeComponent}] },  
+  { path: 'home', component: FullFrameComponent, children: [{path: '', component: UserHomeComponent}] },
 ];
 
 @NgModule({
