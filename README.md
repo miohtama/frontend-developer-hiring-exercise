@@ -1,122 +1,84 @@
-*Please note this position is closed and we are not taking anymore new submissions.*
+# Introduction
 
-# Frontend software developer hiring exercise
+This is a software development exercise for a FirstBlood Technologies frontend developer position.
 
-This is a sample project for frontend skills assessment in our developer positions. 
-The project was created using Angular `ng` code generators and Visual Studio Code.
-
-[See the PDF for open position for frontend engineer: Angular/TypeScript](./frontend-engineer.pdf)
-
-[More about the hiring process](https://github.com/miohtama/how-to-hire-developers)
-
-- [What are we assessing here?](#what-are-we-assessing-here-)
-- [How to complete this exercise](#how-to-complete-this-exercise)
-  * [Pull request content](#pull-request-content)
-- [Exercise](#exercise)
-- [How to run code](#how-to-run-code)
-  * [Development server](#development-server)
-  * [Code scaffolding](#code-scaffolding)
-  * [Build](#build)
-  * [Running unit tests](#running-unit-tests)
-  * [Running end-to-end tests](#running-end-to-end-tests)
-  * [Further help](#further-help)
-
-# What are we assessing here?
-
-We want to ensure that all candidates have skills needed to work with complex Angular frontends
-
-* Working with Angular framework: Creation of new components, interacting with services
-
-* Code quality and communication: Comments, the naming of functions, readability
-
-* Eye for user experience and design: Crafting page and responsive layouts, working with CSS frameworks
-
-* Writing tests, both unit and end-to-end tests  
-
-For smart and extra hard-working people, we will credit extra points 
-for recommendations and new best practices we learn from you.
-
-# How to complete this exercise
-
-* This exercise should take an hour for an experienced Angular developer, somewhat longer if you have 
-  not done Angular work recently.
-
-* You might want to peek into Angular v8 documentation, [CLI](https://cli.angular.io/) and [Material](https://material.angular.io/) packages before diving in,
-  especially if you have not been working with Angular before.
-
-* Create a private clone of [this repository](https://github.com/miohtama/frontend-developer-hiring-exercise). 
-  Make sure your clone is *private* as you do not want to show sloppiness by leaking your super-secret solutions to other
-  candidates.
-
-* Track how much time (hours, minutes) you spent on the exercise. This will not affect your application, but we will use this 
-  to tune the hiring process and make sure the exercises are challenging, but not too easy. 
-
-* Make a pull request against the repository you created yourself.
-
-* When you are done, send an invitation to the repository to Github user `miohtama` ([me](https://twitter.com/moo9000))
-  and also notify me via [email](mailto:mikko@fb.io)
-
-* I will take a look at your work, make notes and let you know the feedback. There are two possible outcomes
-
-    - The hiring process continues with you and you will be invited to a video interview 
-
-    - The exercise outcome did not match the expectations, but we will let you know if there are other open positions
-      in organisation that might be suitable for your resume 
-
-    - Give us 1-2 business days to get back to you after your email where you state the exercise is complete
-
-## Pull request content 
-
-Things we would like to see in the pull request commentary
-
-* What what was changed and why
-
-* The screenshot of fixed issues and changes in the UI
-
-* How much you spent time on it
-
-* Any good ideas and recommendations you came up while working on it
+If you have not applied yet, apply through [StackOverlow page](https://stackoverflow.com/jobs/companies/firstblood).
+This exercise is open only for candidates who we have send an email to complete the exercise.
 
 # Exercise
 
-The exercise application has a sign-up form as in the screenshot.
+## Your task
 
-![A sample screenshot](https://raw.githubusercontent.com/miohtama/frontend-exercise/master/screenshot.png)
+Your task is to create a registration form for Angular 9, NestJS + Clarity application.
+We estimate this will take 3-4 hours for a person who is familiar with the technology stack.
+The application skeleton and instructions are well prepared,
+but expect extra 2-4 hours if you are not familiar with NestJS or Clarity.
+The technology stack is the same that you will be using in when working us.
 
-The task is to add a new field on this sign-up screen and make the sign-up form prettier.
+Task:
 
-1. Add a field asking users for their international mobile phone number. Make sure this input is user-friendly 
-   and works with people who have no clue what's an international phone number format. You are free to 
-   pick any field, component or framework to be included in this project, even if the choice 
-   would not make sense from the maintenance perspective: jQuery/Bootstrap is ok if you think can make it work.
+- Add a registration screen to an existing Angular application skeleton
+  - The new registration screen is linked from the login screen ("Sign up")
+  - We need to input the following from the new users:
+    - Email
+    - Password
+    - Display name
+    - Phone number in an international plus prefixed format, like `+1 555 1231234`
 
-2. The inputted phone number should be passed to `UserService` when the user registers. When the number is stored,
-   name sure it is normalised in plus format like `+3581231234`, no spaces or funny characters in the string.  
+- Make the login/registration form look professional
 
-3. Write an end-to-end test that checks the phone number was correctly saved. 
-   You might need to add a control displaying the telephone number back in the user interface somewhere.
-   This test must be executed when the command `ng e2e` is run. (I do not like Protractor for
-   running tests, but it is the default in Angular schematics.)
+- Think phone number input UX.
+  Phone number widget must have a good UX for global visitors who might lack an understanding
+  what a phone number country code is. Feel free to use your favorite phone number
+  widget.
 
-4. Make the sign-up form pretty. Currently, as you see, the form lacks good styling. 
-   The page needs to look pretty and behave well both web and mobile. Element sizes,
-   paddings, margins and fonts look harmonious. This 
-   assess that you are able to accomplish basic UI design work. The context of the 
-   form is an imaginary eSports or video game site.
+- Add a phone number to the existing dashboard screen, so that users can see their registered phone number
+
+- Add end-to-end tests for the new registration functionality
+  - Registration success - validated by having the information visible on the dashboard screen
+  - Bad phone number
+  - Bad email
+  - Any other validation you know needs to be done on a normal registration form
+
+- Open a pull request which will be reviewed
+  - Commentary contains screenshots of changed screens
+  - Commentary contains instructions for an internal QA team (the exercise author, or me) how to manually test your pull request
+    assuming they run the application locally on their computer
+  - Commentary on other application structure you would prefer to change if you were to take over the whole application,
+    or other useful suggestions
+
+## How to submit the exercise
+
+- [ ] Create a private copy of this Github repository
+- [ ] Complete the task above
+- [ ] Create a new pull request against **your private repository**
+- [ ] In the PR, write down number of hours you spent on this exercise (we do not use this to rank you, we use it to adjust the duration of future exercises)
+- [ ] Invite a Github user `miohtama` to your repository
+- [ ] Send email to `mikko@fb.io` that you have completed the exercise
+
+## How your exercise submission will be ranked
+
+We will look
+
+1. Whether the task was correctly completed and every instruction was followed
+2. Visual quality of the user interface changes - the layouts must look professional, extra points for eye candy and something that looks very video gaming
+3. Tests pass: both new and old
+4. Pull request description quality - the pull request must look like a professional
+5. Code comment quality - if your code lacks helpful comments you will be negatively scored for it
 
 # How to run code
 
-The assessment is based on Angular 8 scaffolding. 
+The assessment is based on Angular 8 scaffolding.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Tested on Node v11.0.0.
+Tested on Node v12.0.0.
 
 Example:
 
-```
+```sh
 npm install
 ng serve
 ```
@@ -137,7 +99,6 @@ Date: 2020-02-04T10:04:44.023Z - Hash: 6e5aa8eb8c49ec6ad889 - Time: 10113ms
 ** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
 ℹ ｢wdm｣: Compiled successfully.
 ```
-
 
 ## Code scaffolding
 
@@ -186,7 +147,7 @@ You can also run tests under [Visual Studio Code with debug/breakpoint support w
             "program": "${workspaceFolder}/node_modules/protractor/bin/protractor",
             "protocol": "inspector",
             "args": ["${workspaceFolder}/e2e/protractor.conf.js"]
-          }                
+          }
     ]
 }
 ```
@@ -199,4 +160,4 @@ You can also run tests under [Visual Studio Code with debug/breakpoint support w
 
 ## Further help
 
-To get more help contact me via email or [poke me on Twitter](https://twitter.com/moo9000).
+To get more help contact me via email or [poke me on LinkedIn](https://www.linkedin.com/in/ohtis/).
