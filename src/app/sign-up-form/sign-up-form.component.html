@@ -1,22 +1,131 @@
 <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)" class="form form-signup">
 
-    <mat-form-field class="form-element">
-        <mat-label>Email</mat-label>
-        <input matInput placeholder="example@example.com" formControlName="email">
-    </mat-form-field>
+    <!-- [NgClass] add a class (is-valid or is-invalid) depends on the value flag of each input 
+        and if the input was touched. Valid: green | invalid: red -->
 
-    <mat-form-field class="form-element">
-        <mat-label>Name</mat-label>
-        <input matInput placeholder="John Appleseed" formControlName="name">
-    </mat-form-field>
+    <div class="row d-flex justify-content-center">
+        <div class="form-group col-10">
+            <label for="exampleInputEmail1"></label>
+            <input type="email" id="input_email" class="form-control shadow-none" formControlName="email"
+                [ngClass]="{ 'is-valid':valid_email && formGroup.controls['email']?.touched, 'is-invalid':!valid_email && formGroup.controls['email']?.touched }" placeholder="Email">
+        </div>
+    </div>
 
-    <mat-form-field class="form-element">
-        <mat-label>Password</mat-label>
-        <input matInput formControlName="password">
-    </mat-form-field>
+    <div class="row d-flex justify-content-center">
+        <div class="form-group col-10">
+            <label for="exampleInputEmail1"></label>
+            <input class="form-control shadow-none" id="input_name" formControlName="name" placeholder="Name"
+                [ngClass]="{ 'is-valid':valid_name && formGroup.controls['name']?.touched, 'is-invalid':!valid_name && formGroup.controls['name']?.touched }">
+        </div>
+    </div>
 
-    <div class="form-element">
-        <button mat-raised-button color="primary" type="submit" class="button">Sign up</button>
+    <div class="row d-flex justify-content-center">
+        <div class="form-group col-10">
+            <label for="exampleInputEmail1"></label>
+            <input type="password" id="input_pw" class="form-control shadow-none" formControlName="password"
+                placeholder="Password" [ngClass]="{ 'is-valid':valid_pw && formGroup.controls['password']?.touched, 'is-invalid':!valid_pw && formGroup.controls['password']?.touched }">
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="form-group col-10">
+            <label for="exampleInputEmail1"></label>
+            <input type="password" id="input_confirm_pw" class="form-control shadow-none" formControlName="confirm_pw"
+                placeholder="Confirm password" [ngClass]="{ 'is-valid':pwValidada && formGroup.controls['confirm_pw']?.touched, 'is-invalid':!pwValidada && formGroup.controls['confirm_pw']?.touched }">
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="form-group col-4">
+            <label for="exampleInputEmail1"></label>
+            <input id="input_country_code" class="form-control shadow-none" placeholder="Country code"
+                formControlName="country_code" [ngClass]="{ 'is-valid':valid_code && formGroup.controls['country_code']?.touched, 'is-invalid':!valid_code && formGroup.controls['country_code']?.touched }">
+            <small id="span_code" class="form-text text-muted d-flex justify-content-center">Country code</small>
+        </div>
+        <div class="form-group col-6">
+            <label for="exampleInputEmail1"></label>
+            <input id="input_phone" class="form-control shadow-none" formControlName="phone_number"
+                placeholder="Phone number" [ngClass]="{ 'is-valid':valid_phone && formGroup.controls['phone_number']?.touched, 'is-invalid':!valid_phone && formGroup.controls['phone_number']?.touched }">
+            <small class="form-text text-muted d-flex justify-content-center">Phone number</small>
+        </div>
+    </div>
+
+    <div class="form-element mt-5 d-flex justify-content-center">
+        <button class="btn btn-outline-success" id="boton" [disabled]="formGroup.invalid || pw_invalid" type="submit">Sign
+            up</button>
     </div>
 
 </form>
+
+<style>
+    .form-control {
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        background-color: #424242;
+        border-radius: 2%;
+        font-size: 100%;
+    }
+
+    .form-group>small {
+        visibility: hidden;
+    }
+
+    input {
+        color: white !important;
+    }
+
+    ::placeholder {
+        color: white;
+    }
+
+    input.ng-invalid.ng-touched {
+        border-bottom: 1px solid red;
+    }
+
+    /* // Extra small devices (portrait phones, less than 576px) */
+    @media (max-width: 575.98px) {
+
+        input::placeholder {
+            font-size: 60%;
+        }
+
+        .form-group>small {
+            visibility: visible;
+        }
+
+        #input_country_code::placeholder,
+        #input_phone::placeholder {
+            visibility: hidden;
+        }
+
+    }
+
+    /* Small devices (landscape phones, 576px and up) */
+    @media (min-width: 576px) and (max-width: 767.98px) {
+
+        input::placeholder {
+            font-size: 50%;
+        }
+
+        .form-group>small {
+            visibility: visible;
+            font-size: 70%;
+        }
+
+        #input_country_code::placeholder,
+        #input_phone::placeholder {
+            visibility: hidden;
+        }
+
+    }
+
+    /* Medium devices (tablets, 768px and up) */
+    @media (min-width: 768px) and (max-width: 991.98px) {}
+
+    /* Large devices (desktops, 992px and up) */
+    @media (min-width: 992px) and (max-width: 1199.98px) {}
+
+    /* Extra large devices (large desktops, 1200px and up) */
+    @media (min-width: 1200px) {}
+</style>
